@@ -28,16 +28,28 @@
 				<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 					<!-- ОДНА СТАТЬЯ!! НАЧАЛО -->
 					<div id="post">
-						<h3><?php the_title(); ?></h3>
-						<div id="time"><?php the_time(); ?></div>
+						<a href="<?php the_permalink(); ?>">
+							<h3><?php the_title(); ?></h3>
+						</a>
+						<div id="time">
+							<?php the_date( "d.m.y " ); ?>
+							<span><?php the_time(); ?></span>
+						</div>
 						<article class="clr article">
-							<?php	the_content(); ?>
+							<div class="artimg"><img src="<?php bloginfo('template_url' );?>/img/miami.jpg"></div>
+							<p><?php	the_content(); ?></p>
 						</article>
+						<hr>
+						<div class="like clr">
+							<div class="tags">
+								<?php the_tags( "Теги: " ); ?>
+							</div>
+								<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+								<i class="fa fa-share" aria-hidden="true"></i>
+						</div>
 						<div class="comments_shape">
 							<p>comments</p>
-							<div class="like">
-								like repost
-							</div>
+							
 							<!-- <div class="comments clr"> -->
 											<!-- НАЧАЛО КОММЕНТАРИЯ -->
 									<!-- <div class="comment">  -->

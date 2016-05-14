@@ -7,9 +7,7 @@ body, html{
 }
 .wrapper{
 	width: 100%;
-	height: 100%;
-	background-color: rgba(2,57,186,0.1);	 	
-	height: 2000px;
+	background-color: rgba(2,57,186,0.1);
 }
 #topbar{
 	height: 70px;
@@ -115,7 +113,6 @@ div.content{
 	padding: 10px 0;
 	overflow: hidden;
 	margin: 0 auto;
-	height: 1500px;
 }
 div.posts{
 	width: 100%;
@@ -131,24 +128,54 @@ div.posts{
 }
 #post h3{
 	float: left;
+	text-decoration: none;
+	color: #333;
+	margin-left: 10px;
+}
+#post h3:hover{
+	text-decoration: underline;
 }
 #time{
 	float: right;
 }
+#time>span{
+	font-weight: bold;
+}
 #post>article {
 	padding: 10px 5px;
+	overflow: hidden;
+}
+.artimg img{
+	max-width: 200px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 5px solid green;
 }
 .like{
 	height: 15px;
 	text-align: right;
 	line-height: 15px;
+	margin: 10px 0;
 }
-.comments_shape p{
+.like i:hover{
+	color: grey;
+	cursor: pointer;
+}
+.tags{
 	float: left;
+}
+.tags span{
+	border-radius: 20px;
+	text-decoration: none;
+	background-color: #333;
 }
 .comments_shape {
 	width: 100%;
 	border: 2px solid black;
+	padding: 10px 0;
+	/*margin-top: 20px;*/
 }
 .comments{
 	width: 100%;
