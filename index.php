@@ -36,8 +36,10 @@
 							<span><?php the_time(); ?></span>
 						</div>
 						<article class="clr article">
-							<div class="artimg"><img src="<?php bloginfo('template_url' );?>/img/miami.jpg"></div>
-							<p><?php	the_content(); ?></p>
+							<a href="<?php the_permalink(); ?>">
+								<div class="artimg"><?php the_post_thumbnail(); ?></div>
+							</a>
+							<p><!-- <?php	the_content(); ?> --> <?php the_excerpt(); ?></p>
 						</article>
 						<hr>
 						<div class="like clr">
@@ -48,19 +50,19 @@
 								<i class="fa fa-share" aria-hidden="true"></i>
 						</div>
 						<div class="comments_shape">
-							<p>comments</p>
+							<p>comments ()</p>
 							
-							<!-- <div class="comments clr"> -->
-											<!-- НАЧАЛО КОММЕНТАРИЯ -->
-									<!-- <div class="comment">  -->
-										<!-- <div class="comment_author"> -->
-											<!-- <?php echo get_comment_author_email(get_comment_id()); ?> -->
-										<!-- </div> -->
-										<!-- <div class="comment_time">12:15</div>
-										<div class="comment_text"></div> -->
-									<!-- </div> -->
-											<!-- КОНЕЦ КОММЕНТАРИЯ -->
-							<!-- </div> -->
+							<!-- <div class="comments clr">
+											НАЧАЛО КОММЕНТАРИЯ
+									<div class="comment">
+										<div class="comment_author">
+											<?php echo get_comment_author_email(get_comment_id()); ?>
+										</div>
+										<div class="comment_time">12:15</div>
+										<div class="comment_text"></div>
+									</div>
+											КОНЕЦ КОММЕНТАРИЯ
+							</div> -->
 						</div>
 					</div>
 					<!-- ОДНА СТАТЬЯ!! КОНЕЦ -->

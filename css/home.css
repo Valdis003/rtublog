@@ -145,19 +145,28 @@ div.posts{
 	padding: 10px 5px;
 	overflow: hidden;
 }
-.artimg img{
-	max-width: 200px;
+.artimg{
+	width: 200px;
+	height: 150px;
 	float: left;
 	margin-right: 20px;
 	margin-bottom: 20px;
+	border-radius: 20px;
+	background-color: greenyellow;
+}
+.artimg img{
+	padding: 0;
+	max-width: 200px;
+	max-height: 150px;
 	border-radius: 20px;
 	border: 5px solid green;
 }
 .like{
 	height: 15px;
-	text-align: right;
+	/*text-align: right;*/
 	line-height: 15px;
 	margin: 10px 0;
+	float: right;
 }
 .like i:hover{
 	color: grey;
@@ -166,14 +175,9 @@ div.posts{
 .tags{
 	float: left;
 }
-.tags span{
-	border-radius: 20px;
-	text-decoration: none;
-	background-color: #333;
-}
 .comments_shape {
 	width: 100%;
-	border: 2px solid black;
+	/*border: 2px solid black;*/
 	padding: 10px 0;
 	/*margin-top: 20px;*/
 }
@@ -193,17 +197,18 @@ div.posts{
 .comment_time{
 	text-align: right;
 }
-/*.new_comment{
-	border: 2px solid black;
-	width: 50%;
-	height: 200px;
-}*/
+
 div.top_panel{
 	box-shadow: 0 3px 10px -2px rgba(0,0,0,.5);
 	border-radius: 20px;
 	overflow: hidden;
 	text-align: center;
 	margin: 10px;
+}
+.top_panel img{
+	border-radius: 20px;
+	border: 3px solid green;
+	margin-top: 3px;
 }
 .twn{
 	padding: 10px;

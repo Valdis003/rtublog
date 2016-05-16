@@ -14,3 +14,5 @@ function reg (){
 	wp_enqueue_script('common');
 }
 add_action('wp_enqueue_scripts', 'reg');
+
+add_theme_support( 'post-thumbnails' );
