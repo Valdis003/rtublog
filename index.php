@@ -10,7 +10,7 @@
 		<?php get_header(); ?>
 		<div class="content">
 		<!-- <?php get_search_form(); ?> -->
-			<!-- <div class="top_panel col-md-10 col-lg-10">	
+			<div class="top_panel">	
 				<a href="https://www.google.ru/search?hl=ru&q=los+angeles" target="_blank">
 					<img src="<?php bloginfo('template_url' );?>/img/losangeles.jpg" alt="" class="twn">
 				</a>
@@ -23,9 +23,9 @@
 				<a href="https://www.google.ru/search?hl=ru&q=miami" target="_blank">
 					<img src="<?php bloginfo('template_url' );?>/img/miami.jpg" alt="" class="twn">
 				</a>
-			</div> -->
+			</div>
 			<div class="row">
-				<div class="posts col-md-10 col-lg-10">
+				<div class="posts col-md-9 col-lg-9">
 					<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 						<!-- ОДНА СТАТЬЯ!! НАЧАЛО -->
 						<div id="post">
@@ -42,16 +42,13 @@
 								</a>
 								<p><!-- <?php	the_content(); ?> --> <?php the_excerpt(); ?></p>
 							</article>
-							<hr>
-							
+							<div class="tags">
+									<?php the_tags( "Теги: " ); ?>
+							</div>
 							<div class="like">
 								<i class="fa fa-thumbs-up" aria-hidden="true"></i>
 								<i class="fa fa-share" aria-hidden="true"></i>
 							</div>
-							<div class="tags">
-									<?php the_tags( "Теги: " ); ?>
-							</div>
-							<hr>
 							<div class="comments_shape">
 								<p>comments ()</p>
 							</div>
@@ -60,18 +57,9 @@
 					<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
-				<sidebar class="sidebar col-md-2 col-lg-2">
-					<ul class="sidebar_menu">
-						<li><a href="">First</a></li>
-						<li><a href="">second</a></li>
-						<li><a href="">third</a></li>
-						<li><a href="">Forth</a></li>
-						<li><a href="">Fifth</a></li>
-					</ul>
-				</sidebar>
+				<?php get_sidebar() ?>
 		</div>
 		<?php wp_footer(); ?>
 	</div>
-	<script src="libs/headhesive/headhesive.min.js"></script>
 </body>
 </html>

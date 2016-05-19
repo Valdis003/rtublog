@@ -9,7 +9,7 @@
 		<li><a href="index.php">Home</a></li>
 		<li class="dropdown"><a href="">About</a> 
 			<ul>
-				<li class="dropdown-menu"><a href="aboutMe.html">aboutme</a></li>
+				<li class="dropdown-menu"><a href="<?php bloginfo('url');?>/aboutMe.html">aboutme</a></li>
 				<li class="dropdown-menu"><a href="#">aboutblog</a></li>	
 			</ul>
 		</li>

@@ -1,4 +1,5 @@
-/*HEADEEER*/*{
+/*-------------------------HEADEEER-----------------------------*/
+*{
 	margin: 0;
 }
 body, html{
@@ -12,8 +13,28 @@ body, html{
 #topbar{
 	height: 70px;
 	width: 100%;
-	background: rgba(220,220,220, 0.3);
-	box-shadow: 0 0px 10px -2px rgba(0,0,0,.3);
+	background: rgba(2,57,220, 0.2);
+	box-shadow: 0 2px 10px -2px rgba(0,0,0,.3);
+}
+.headhesive{
+	position: absolute;
+	top: -100px;
+	height: 10px;
+}
+.headhesive--stick{
+	position: fixed;
+	top: 0px;
+	z-index: 10;
+
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+
+	background: rgba(2,57,220, 0.5);
+	/*box-shadow: 0 2px 10px -2px rgba(0,0,0,.3);*/
+}
+.headhesive--unstick{
+	height: 10px;
 }
 #logo{
 	width: 190px;
@@ -39,7 +60,7 @@ body, html{
 	padding: 0 20px;
 }
 .user a:hover{
-	background-color: rgba(255,255,255,0.3);
+	background-color: rgba(2,57,220, 0.2);
 }
 
 nav ul{
@@ -48,22 +69,23 @@ nav ul{
 	right: 200px;
 }
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!111*/
-nav ul li:hover{background: rgba(150,200,240, 0.8);} 
+nav ul li:hover{background: rgb(147,170,239)} 
 
 nav ul li:hover > ul{display: block;}
 
 nav ul li{
-	 float: left;
-	 -webkit-transition: all .3s ease-in-out;
-	 -moz-transition: all .3s ease-in-out;
-	 transition: all .3s ease-in-out;
+	float: left;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
 }
 nav ul ul li{
-	background: rgba(220,220,220, 0.9); 
+	background: rgba(184,199,243, 1);
 }
 nav ul li a{
 		display: block; 
-		padding: 27px 20px;
+		padding: 0 15px;
+		line-height: 70px;
 		color: #000; 
 		font-size: .9em;
 		letter-spacing: 1px;
@@ -72,11 +94,12 @@ nav ul li a{
 }
 nav ul ul{
 		display: none;
-		left: 86px;
+		left: 71px;
 }
 nav ul ul li a {
 		padding: 10px;
 		width: 100px;
+		line-height: 30px;
 }
 /* НАЧАЛО АНИМИРОВАННОГО ПОИСКА*/
 #search{
@@ -105,7 +128,7 @@ body:hover nav form input{
 	width: 45px;
 }
 /* КОНЕЦ АНИМИРОВАННОГО ПОИСКА*/
-/*END HEAADEER*/
+/*----------------------------------------END HEAADEER----------------------------------*/
 .clr{
 	clear: both;
 }
@@ -116,11 +139,15 @@ div.content{
 }
 .sidebar{
 	margin-top: 10px;
-	border-left: 2px solid black;
+	margin-left: 20px;
+	border-left: 1px solid black;
 }
 .sidebar_menu{
 	list-style-type: none;
 	padding-left: 10px;
+}
+.sidebar_menu li{
+	border-bottom: 1px solid grey;
 }
 .sidebar_menu li a{
 	text-decoration: none;
@@ -133,6 +160,7 @@ div.content{
 }
 div.posts{
 	overflow: hidden;
+	margin-left: 20px;
 }
 #post{
 	border-radius: 15px;
@@ -140,6 +168,7 @@ div.posts{
 	border: 1px solid rgba(0,0,0,.2);
 	padding: 10px 10px;
 	background: rgba(255,255,255, 0.3);
+	box-shadow: 0 2px 10px -2px rgba(0,0,0,.4);
 }
 #post h3{
 	float: left;
@@ -167,14 +196,14 @@ div.posts{
 	margin-right: 20px;
 	margin-bottom: 20px;
 	border-radius: 20px;
-	background-color: greenyellow;
+	background-color: rgba(2, 57, 186, .3);
 }
 .artimg img{
-	padding: 0;
 	max-width: 200px;
 	max-height: 150px;
+	padding: 0;
 	border-radius: 20px;
-	border: 5px solid green;
+	border: 3px solid rgba(2, 57, 186, .1);
 }
 .like{
 	float: right;
@@ -185,39 +214,21 @@ div.posts{
 	cursor: pointer;
 }
 .tags{
-	line-height: 30px;
+	left: 200px;
 }
 .comments_shape {
-	width: 100%;
-	/*border: 2px solid black;*/
-	padding: 10px 0;
-	/*margin-top: 20px;*/
+	line-height: 30px;
 }
 div.top_panel{
-/*	box-shadow: 0 3px 10px -2px rgba(0,0,0,.5);
-	border-radius: 20px;*/
 	overflow: hidden;
 	text-align: center;
 	margin: 10px;
+	border-bottom: 1px solid grey;
+	padding-bottom: 20px;
 }
 .top_panel img{
 	border-radius: 20px;
-	border: 3px solid green;
-	margin-top: 3px;
+	border: 3px solid  rgba(2,57,186,.2);
+	margin: 0 20px;
 }
-.twn{
-	padding: 10px;
-}
-.headhesive{
-	transform: translateY(-150%);
-	position: fixed;
-	z-index: 5;
-	/*padding: 25px 0;*/
-}
-.headhesive--stick{
-	transform: translateY(0%);
-	top: 0;
-	width: 100%;
-	transition: 0.4s;
-	/*padding: 10px 0;*/
-}
+/*ССЫЛКА В КОТОРОМ ИЗОБРАЖЕНИЕ ШИРЕ САМОГО ИЗОБРАЖЕНИЯ*/
